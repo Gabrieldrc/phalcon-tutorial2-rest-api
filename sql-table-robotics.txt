@@ -1,0 +1,8 @@
+CREATE DATABASE `robotics`;
+CREATE TABLE `robotics`.`robots` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `name` varchar(200) COLLATE utf8_bin NOT NULL,
+ `type` varchar(200) COLLATE utf8_bin NOT NULL,
+ `year` smallint(2) unsigned NOT NULL,
+ PRIMARY KEY (`id`)
+)
