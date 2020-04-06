@@ -10,7 +10,7 @@ $loader = new Loader();
 
 $loader->registerNamespaces(
     [
-        'Models' => __DIR__ . '../app/models/',
+        'Models' => '../app/models/',
     ]
 );
 
