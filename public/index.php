@@ -34,6 +34,7 @@ $container->set(
 
 $app = new Micro($container);
 
+// Retrieves all robots
 $app->get(
     '/api/robots',
     function () use ($app) {
@@ -55,6 +56,7 @@ $app->get(
     }
 );
 
+// Searches for robots with $name in their name
 $app->get(
     '/api/robots/search/{name}',
     function ($name) use($app) {
@@ -81,6 +83,7 @@ $app->get(
     }
 );
 
+// Retrieves robots based on primary key
 $app->get(
     '/api/robots/{id:[0-9]+}',
     function ($id) use ($app) {
@@ -121,6 +124,7 @@ $app->get(
     }
 );
 
+// Adds a new robot
 $app->post(
     '/api/robots',
     function () use ($app) {
@@ -179,6 +183,7 @@ $app->post(
     }
 );
 
+// Updates robots based on primary key
 $app->put(
     '/api/robots/{id:[0-9]+}',
     function ($id) use ($app) {
@@ -229,6 +234,7 @@ $app->put(
     }
 );
 
+// Deletes robots based on primary key
 $app->delete(
     '/api/robots/{id:[0-9]+}',
     function ($id) use ($app) {
